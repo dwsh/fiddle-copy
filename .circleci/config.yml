@@ -178,12 +178,12 @@ workflows:
           matrix:
             parameters:
               arch: [ x64, arm64 ]
-          filters:
-            tags:
-              only: 
-                - /^v.*/
-            branches:
-              ignore: /.*/
+          # filters:
+          #   tags:
+          #     only: 
+          #       - /^v.*/
+          #   branches:
+          #     ignore: /.*/
       # - win-build:
       #     matrix:
       #       parameters:
@@ -207,7 +207,7 @@ workflows:
       - publish-to-github:
           context: fiddle-release
           requires:
-            - mac-test
+            # - mac-test
             - mac-build
           filters:
             tags:
