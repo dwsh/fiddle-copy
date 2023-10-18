@@ -70,4 +70,4 @@ logo guidelines](https://github.com/logos).
 [desktopCapturer]: https://electronjs.org/docs/latest/api/desktop-capturer
 [electron-forge]:  https://electronforge.io/
 
-.
+..
