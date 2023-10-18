@@ -47,6 +47,7 @@ app for Windows, macOS, or Linux.
 
 ### Start with Fiddle, Continue Wherever
 
+
 <img width="1916" alt="Screenshot: Visual Studio Code with Fiddle Export" src="https://user-images.githubusercontent.com/8198408/183117021-25c044a8-5a3b-4ff0-97ea-b6ae16d488ea.png">
 
 Fiddle is not an IDE – it is however an excellent starting point. Once your
@@ -68,3 +69,5 @@ logo guidelines](https://github.com/logos).
 [BrowserView]: https://electronjs.org/docs/latest/api/browser-view
 [desktopCapturer]: https://electronjs.org/docs/latest/api/desktop-capturer
 [electron-forge]:  https://electronforge.io/
+
+.
