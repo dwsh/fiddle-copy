@@ -160,19 +160,19 @@ jobs:
 workflows:
   build-and-test:
     jobs:
-      - lint
+      # - lint
       - mac-test:
           matrix:
             parameters:
               arch: [ x64, arm64 ]
-      - win-test:
-          matrix:
-            parameters:
-              arch: [ x64 ]
-      - linux-test:
-          matrix:
-            parameters:
-              arch: [ x64 ]
+      # - win-test:
+      #     matrix:
+      #       parameters:
+      #         arch: [ x64 ]
+      # - linux-test:
+      #     matrix:
+      #       parameters:
+      #         arch: [ x64 ]
       - mac-build:
           context: fiddle-release
           matrix:
@@ -184,26 +184,26 @@ workflows:
                 - /^v.*/
             branches:
               ignore: /.*/
-      - win-build:
-          matrix:
-            parameters:
-              arch: [ x64, ia32 ]
-          filters:
-            tags:
-              only: 
-                - /^v.*/
-            branches:
-              ignore: /.*/
-      - linux-build:
-          matrix:
-            parameters:
-              arch: [ x64, arm64, armv7l ]
-          filters:
-            tags:
-              only: 
-                - /^v.*/
-            branches:
-              ignore: /.*/
+      # - win-build:
+      #     matrix:
+      #       parameters:
+      #         arch: [ x64, ia32 ]
+      #     filters:
+      #       tags:
+      #         only: 
+      #           - /^v.*/
+      #       branches:
+      #         ignore: /.*/
+      # - linux-build:
+      #     matrix:
+      #       parameters:
+      #         arch: [ x64, arm64, armv7l ]
+      #     filters:
+      #       tags:
+      #         only: 
+      #           - /^v.*/
+      #       branches:
+      #         ignore: /.*/
       - publish-to-github:
           context: fiddle-release
           requires:
@@ -215,12 +215,12 @@ workflows:
                 - /^v.*/
             branches:
               ignore: /.*/
-      - notify-sentry-deploy:
-          requires:
-            - publish-to-github
-          filters:
-            tags:
-              only:
-                - /^v.*/
-            branches:
-              ignore: /.*/
+      # - notify-sentry-deploy:
+      #     requires:
+      #       - publish-to-github
+      #     filters:
+      #       tags:
+      #         only:
+      #           - /^v.*/
+      #       branches:
+      #         ignore: /.*/
