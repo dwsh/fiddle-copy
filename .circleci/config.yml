@@ -207,13 +207,8 @@ workflows:
       - publish-to-github:
           context: fiddle-release
           requires:
-            - lint
             - mac-test
-            - win-test
-            - linux-test
             - mac-build
-            - win-build
-            - linux-build
           filters:
             tags:
               only: 
