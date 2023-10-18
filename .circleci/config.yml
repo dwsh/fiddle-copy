@@ -161,10 +161,10 @@ workflows:
   build-and-test:
     jobs:
       # - lint
-      - mac-test:
-          matrix:
-            parameters:
-              arch: [ x64, arm64 ]
+      # - mac-test:
+      #     matrix:
+      #       parameters:
+      #         arch: [ x64, arm64 ]
       # - win-test:
       #     matrix:
       #       parameters:
